@@ -1,0 +1,88 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+
+		<title>Number guessing game</title>
+
+		<!-- Google Fonts -->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,900;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+			rel="stylesheet"
+		/>
+
+		<!-- CSS Style Sheets -->
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+			integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="Guessing-game.css" />
+
+		<!-- Font Awesome -->
+		<script
+			src="https://kit.fontawesome.com/13ac354fb9.js"
+			crossorigin="anonymous"
+		></script>
+
+		<!-- bootstarp script -->
+		<script
+			src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+			integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+			integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+			integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+			crossorigin="anonymous"
+		></script>
+	</head>
+
+	<body>
+		<section class="white-section" id="cta">
+			<div class="container-fluid">
+				<h1 class="big-heading">Anton's number guessing game</h1>
+				<p>
+					We have selected a random number between 1 and 100. See if you can
+					guess it in 10 turns or fewer. We'll tell you if your guess was too
+					high or too low.
+				</p>
+				<div class="form">
+					<label for="guessField" class="sr-only guessField">Enter a guess: </label
+					><input type="text" id="guessField" class="form" />
+					<input type="submit" value="Submit guess" class="btn-dark" />
+				</div>
+
+				<div class="resultParas">
+					<p class="guesses"></p>
+					<p class="lastResult"></p>
+					<p class="lowOrHi"></p>
+				</div>
+			</div>
+		</section>
+
+		<script>
+			// Adding variables to store our data
+			let randomNumber = Math.floor(Math.random() * 100) + 1;
+
+			const guesses = document.querySelector(".guesses");
+			const lastResult = document.querySelector(".lastResult");
+			const lowOrHi = document.querySelector(".lowOrHi");
+
+			const guessSubmit = document.querySelector(".guessSubmit");
+			const guessField = document.querySelector(".guessField");
+
+			let guessCount = 1;
+			let resetButton;
+		</script>
+	</body>
+</html>
+<!-- @format -->
